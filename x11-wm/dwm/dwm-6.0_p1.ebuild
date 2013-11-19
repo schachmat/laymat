@@ -6,7 +6,7 @@ DESCRIPTION="a dynamic window manager for X11"
 HOMEPAGE="http://dwm.suckless.org/"
 EGIT_REPO_URI="https://github.com/schachmat/dwm"
 EGIT_MASTER="local_six_zero"
-EGIT_COMMIT="0a0add84768ee7862f70225a2bd834d96a870da1"
+EGIT_COMMIT="d54bf5f4e0d111fef6857b61031bdc1c0cd82137"
 
 LICENSE="MIT"
 SLOT="0"
