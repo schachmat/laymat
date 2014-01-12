@@ -5,7 +5,7 @@ inherit git-2 multilib savedconfig toolchain-funcs
 DESCRIPTION="simple terminal implementation for X"
 HOMEPAGE="http://st.suckless.org/"
 EGIT_REPO_URI="https://github.com/schachmat/st"
-EGIT_MASTER="local_config"
+EGIT_MASTER="config"
 
 LICENSE="MIT"
 SLOT="0"
