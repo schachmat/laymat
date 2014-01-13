@@ -5,8 +5,7 @@ inherit eutils savedconfig toolchain-funcs git-2
 DESCRIPTION="a dynamic window manager for X11"
 HOMEPAGE="http://dwm.suckless.org/"
 EGIT_REPO_URI="https://github.com/schachmat/dwm"
-EGIT_MASTER="local_six_zero"
-EGIT_COMMIT="d54bf5f4e0d111fef6857b61031bdc1c0cd82137"
+EGIT_MASTER="config"
 
 LICENSE="MIT"
 SLOT="0"
