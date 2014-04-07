@@ -41,6 +41,8 @@ src_install() {
 	tic -s -o "${ED}"/usr/share/terminfo st.info || die
 	dodoc TODO
 
+	make_desktop_entry ${PN} simpleterm utilities-terminal 'System;TerminalEmulator;' ''
+
 	save_config config.h
 }
 
