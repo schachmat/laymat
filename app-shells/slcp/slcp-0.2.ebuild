@@ -10,14 +10,13 @@ DESCRIPTION="Provides a single binary drawing a shell prompt with git info"
 HOMEPAGE="https://github.com/schachmat/slcp"
 EGIT_REPO_URI="https://github.com/schachmat/slcp"
 EGIT_MASTER="master"
-EGIT_COMMIT="84136669239986d59bd74a3c9324ee6afdfed3de"
 LICENSE="BEER-WARE"
 
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="savedconfig"
 
-DEPEND="=dev-libs/libgit2-0.20*"
+DEPEND=">=dev-libs/libgit2-0.21.0"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
