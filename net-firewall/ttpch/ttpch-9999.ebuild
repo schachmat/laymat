@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit git-2
+inherit savedconfig git-2
 
 DESCRIPTION="Tor transproxy clearnet helper"
 HOMEPAGE="https://github.com/schachmat/ttpch"
@@ -20,10 +20,15 @@ RDEPEND="net-libs/libmnl
 	net-firewall/iptables"
 DEPEND="${RDEPEND}"
 
+src_prepare() {
+	restore_config config.h
+}
+
 src_compile() {
 	emake
 }
 
 src_install() {
 	dosbin ttpch
+	save_config config.h
 }
