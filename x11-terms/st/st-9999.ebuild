@@ -1,13 +1,13 @@
 EAPI=5
 
-inherit git-2 multilib savedconfig toolchain-funcs
+inherit eutils git-2 multilib savedconfig toolchain-funcs
 
 DESCRIPTION="simple terminal implementation for X"
 HOMEPAGE="http://st.suckless.org/"
 EGIT_REPO_URI="https://github.com/schachmat/st"
-EGIT_COMMIT="24f30c0cc353cfd4858d1dd99ad4ce0c44fef38b"
+EGIT_MASTER="config"
 
-LICENSE="MIT"
+LICENSE="MIT-with-advertising"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="savedconfig"
@@ -23,8 +23,9 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 src_prepare() {
-	sed -e '/^CFLAGS/s:[[:space:]]-Wall[[:space:]]: :' \
-		-e '/^CFLAGS/s:[[:space:]]-O[^[:space:]]*[[:space:]]: :' \
+	epatch_user
+
+	sed -e '/^CFLAGS/s:[[:space:]]-O[^[:space:]]*[[:space:]]: :' \
 		-e '/^LDFLAGS/{s:[[:space:]]-s[[:space:]]: :}' \
 		-e '/^X11INC/{s:/usr/X11R6/include:/usr/include/X11:}' \
 		-e "/^X11LIB/{s:/usr/X11R6/lib:/usr/$(get_libdir)/X11:}" \
