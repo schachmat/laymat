@@ -9,7 +9,6 @@ EGIT_MASTER="config"
 
 LICENSE="MIT-with-advertising"
 SLOT="0"
-KEYWORDS="~amd64"
 IUSE="savedconfig"
 
 RDEPEND="media-libs/fontconfig
