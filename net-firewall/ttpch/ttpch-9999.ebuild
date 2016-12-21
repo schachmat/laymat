@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-RDEPEND="net-libs/libmnl
+RDEPEND=">=net-libs/libmnl-1.0.4
 	net-firewall/iptables"
 DEPEND="${RDEPEND}"
 
